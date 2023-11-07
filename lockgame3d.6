@@ -1,0 +1,144 @@
+.TH LOCKGAME3D 6 "7 November 2023"
+.SH NAME
+lockgame3d \- a realistic lockpicking game
+.SH DESCRIPTION
+\fBlockgame3d\fP is an attempt to develop a realistic 3d lockpicking game 
+intended for release to the hobby lockpicking/locksport community.
+.SH CONTROLS
+.SS Navigating the menus
+.TP
+\fBEnter\fP
+Activate a menu item
+.TP
+\fBEsc\fP
+Go back
+.TP
+\fBUp/Down\fP
+Select menu item
+.SS Playing
+.TP
+\fBMove mouse\fP
+Move the pick around (in and out, and up and down)
+.TP
+\fBClick + Drag\fP
+Rotate/Lever pick (pick can also be moved in and out)
+.TP
+\fBA\fP
+Quit to main menu (progress will be lost)
+.TP
+\fBC\fP
+Reset lock (pin binding order will be scrambled, timer resets)
+.TP
+\fBX\fP
+Release all tension (timer keeps going)
+.TP
+\fBSpace\fP
+Increase tension
+.TP
+\fBZ\fP
+Select pick
+.TP
+\fBLeft/Right\fP
+Turn camera
+.TP
+\fBUp\fP
+Move camera forward
+.SH HOW TO PLAY
+Using the main menu select Play (using S)
+Select a lock, select a visibility mode (Full is easiest)
+Select <Play> (using S)
+
+You will now be presented with a 3D lock to attempt picking.  The timer 
+will be counting, so if youre going for that fastest time (seperate time 
+for each visibility mode) hurry :-)  You can reset the timer at any time 
+and start from scratch.
+
+Start by hitting Z to check out the pick selection.  Left/Right select 
+the pick and hitting Z again will bring you back to the lock with your 
+newly-selected pick in-hand.  Raking can work, but isn't as effective as 
+single-pin picking in my experience, so try a good SPP pick (like the 
+Long Hook) at first.
+
+Next you'll need to apply some tension (turning force on the plug).  Hold 
+down V to do this.  By release V, the tension will start to drop back down.  
+If it drops too far, all of the pins will reset; so keep an eye on it.  In 
+this version, it is possible to pick the lock under full-tension and is 
+probably easier that way at first.  As the applied tension increases, you'll 
+notice the arrow beside the tension wrench get longer.
+
+Now that you've applied some tension its time to lift those pins.  The first 
+thing to do is find the "binding pin", this the pin that is currently preventing 
+the plug from turning and the lock from opening.  Only one pin binds at a time, 
+but all must eventually be "set" before the lock will open.  The binding pin 
+will put forth a bit of resistance when pushed on with the pick.  
+
+Once, you've found the binding pin, start pushing it up.  It will set once it 
+reaches the "shearline".  This is an invisible line between the plug and the 
+shell of the lock.  The tension wrench will rotate a bit when this occurs.  
+Once you see this happen, stop pushing the pin up and lower the pick. 
+The top pin should stay up.  Now find the next binding pin and repeat the 
+process.  If you push a pin too far, it will overset (both the top and bottom 
+pin will stay up).  If this happens you must release some or all of the tension 
+to unset it.  If a pin is overset, no other pins will bind until it is unset, and 
+thus the lock cannot be opened.  Once you've properly set all of the pins, the 
+plug will turn and the lock will open!  At this point if your time beats the lock's 
+fastest time, your time will become the fastest time (like a high-score).  Start 
+slow at first, then worry about becoming quick.
+
+If this process sounds completely alien, I suggest checking out some lockpicking 
+texts and books.  The LSI Guide the Lockpicking is free and is excellent in my 
+opinion.  This process is a tad hard to understand without pictures if you've 
+never seen it before.
+.SS Security pins
+The game features 4 types of driver/top pins: Normal, Spool, Serrated, and Spoorated.
+The last 3 are known as security pins and are put in locks to make picking 
+more difficult.  But, don't worry, they aren't that hard to deal with in most 
+cases.  Their behavior in the real world is a bit complicated, and my in-game 
+model of them isnt entirely accurate, but they still act mostly like they should.
+From now on, when I describe them, I am describing my in-game model and not 
+necessarily real-world security pins.
+
+Security pins are made to make you think you've set a pin, when in reality you 
+haven't.  This trickery is accomplished by machining grooves and other shapes 
+into the sides of top pins.  When you push up on a pinstack containing one of 
+these devils under tension, it will "false set" when the shearline reaches one 
+of these grooves.  When this happens, the tension wrench will rotate slightly 
+clockwise just like a real set; don't be fooled!  In order to set the pin, you 
+must keep pushing.  There will be a bit of resistance as you push the pin out 
+of the groove.  When you do, you will see the tension wrench rotate backward 
+(counter-clockwise).  After you get it out of the groove, keep pushing until 
+you either meet another groove or set the pin.
+.SS Misc
+Explore the program and figure out making custom locks, its not too hard and 
+will allow you to experiment.  The fastest times included by default are my own 
+and are just meant as a general gauge so you know how fast each lock can be picked.  
+I expect them all to beaten without too much trouble and the one's I couldn't get 
+to be opened...I challenge you:-)  
+
+The program is not perfect and I know that, but rest assured I worked really, really
+hard on it.  This is the largest project I've worked on (self-taught hobby coder here)  
+This was also my first experience using OpenGL and I've learned a ton.  Thanks to the 
+hobby lockpicking community for the support and inspiration.  Also thanks to 
+JackNco aka John for the testing.  Without him, this app would have turned out a lot 
+buggier than it already is.
+.SH LICENSE
+It is licensed under the Creative Commons Sharealike license.  
+This can be summed up to mean the following:
+.TP
+1)
+You may freely modify, copy, etc.. the game
+.TP
+2)
+You may not make any profit on the game
+.TP
+3)
+You must include credit to me in any modification released
+(A simple mention of me in the Credits will work)
+.TP
+4)
+Any modifications must be release under the same license
+.SH AUTHOR
+Conceived, designed, and implemented by Jonathan King aka JKtheCJer.
+.SH CONTACT
+If you have any questions, comments, suggestions, praise, criticism, etc... is happily 
+accepted at jkthecjer@gmail.com

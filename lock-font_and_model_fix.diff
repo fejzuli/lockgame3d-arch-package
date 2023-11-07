@@ -1,0 +1,34 @@
+--- lock.c.old	2007-07-31 01:08:48.000000000 +0200
++++ lock.c	2023-11-06 10:10:31.174688470 +0100
+@@ -55,6 +55,8 @@
+ #define TRUE  1
+ #define FALSE 0
+ 
++#define OBJECT_PATH "/usr/share/lockgame3d/"
++
+ 
+ struct jk_vertex {
+ 	
+@@ -336,6 +338,7 @@
+     if ( fontInfo == NULL )
+ 	{
+ 	    fontInfo = XLoadQueryFont( dpy, "fixed" );
++	    fontInfo2 = XLoadQueryFont( dpy, "fixed" );
+ 	    /* If that font doesn't exist, something is wrong */
+ 	    if ( fontInfo == NULL )
+ 		{
+@@ -391,8 +394,13 @@
+ 
+ void loadModel(char * nam, char * filename, float scale, float xx, float yy, float zz, float pinlength)
+ {
++	char *path;
++	path = malloc(strlen(OBJECT_PATH) + strlen(filename) + 1);
++	strcpy(path, OBJECT_PATH);
++	strcat(path, filename);
+ 	FILE *fp;
+-	fp = fopen(filename, "r");
++	fp = fopen(path, "r");
++	free(path);
+ 
+ 	if (fp == NULL)
+ 	{

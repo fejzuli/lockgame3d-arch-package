@@ -1,0 +1,7 @@
+Arch Linux package for LockGame 3D by Jonathan King
+
+I fixed loading of the backup font if the primary font is not installed
+and changed the location of *.obj files to /usr/share/lockgame3d.
+I also made a man page based on the linuxReadme.txt.
+
+Game homepage: http://theamazingking.com/lockgame.php
